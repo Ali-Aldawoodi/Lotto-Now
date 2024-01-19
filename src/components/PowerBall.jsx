@@ -12,11 +12,11 @@ function PowerBall() {
             </div>
             <div className="top-circles">
                 < TopCircles />
+                {/* < TopCircles />
                 < TopCircles />
                 < TopCircles />
                 < TopCircles />
-                < TopCircles />
-                < TopCircles />
+                < TopCircles /> */}
             </div>
         </div>
     )
