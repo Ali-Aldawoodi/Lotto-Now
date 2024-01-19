@@ -29,7 +29,7 @@ function TopCircles() {
 
         const fetchData = async () => {
 
-            const url = 'https://powerball.p.rapidapi.com/';
+            const url = 'https://powerball.p.rapidapi.com/latest';
             const options = {
                 method: 'GET',
                 headers: {
@@ -43,7 +43,7 @@ function TopCircles() {
                 const response = await fetch(url, options);
                 const result = await response.json();
                 let tempArray = []
-                for (const element in result.data){
+                for (const element in result.data) {
                     tempArray.push(result.data[element])
                 }
                 setData(tempArray);
@@ -59,11 +59,12 @@ function TopCircles() {
     return (
         <div style={topCircleStyle}>
             <div>hello</div>
-                {data.map(item => (
-                    <RepeatedItem
-                        {...item}
-                    />
-                ))}
+            {data.map(index => (
+                <RepeatedItem
+                    key={index}
+                    {...index}
+                />
+            ))}
         </div>
     )
 };
