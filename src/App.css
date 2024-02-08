@@ -6,4 +6,16 @@
 .top-circles {
     display: flex;
     justify-content: center;
+    
+}
+
+.top-circles-numbers {
+    display: flex;
+    flex-direction: row;
+    color: green;
+}
+
+.circle-row {
+    display: flex;
+    flex-direction: row;
 }

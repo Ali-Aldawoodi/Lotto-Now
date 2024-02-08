@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const RepeatedItem = ({ FirstNumber, SecondNumber, ThirdNumber, FourthNumber, FifthNumber, PowerBall }) => {
     return (
-        <div>
+        <div className='top-circles-numbers'>
             <div>{FirstNumber}</div>
             <div>{SecondNumber}</div>
             <div>{ThirdNumber}</div>
@@ -13,6 +13,12 @@ const RepeatedItem = ({ FirstNumber, SecondNumber, ThirdNumber, FourthNumber, Fi
     )
 }
 
+const topContainerStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap'
+}
+
 const topCircleStyle = {
     padding: 10,
     margin: 20,
@@ -20,6 +26,7 @@ const topCircleStyle = {
     borderRadius: "50%",
     width: 100,
     height: 100,
+    flexDirection: 'row'
 };
 
 function TopCircles() {
@@ -57,13 +64,17 @@ function TopCircles() {
     }, []);
 
     return (
-        <div style={topCircleStyle}>
-            <div>hello</div>
-            {data.map(index => (
-                <RepeatedItem
-                    key={index}
-                    {...index}
-                />
+        <div style={topContainerStyle}>
+            {data.map((item, index) => (
+                <div className='circle-row' key= {index} >
+                    <div style= {topCircleStyle}><RepeatedItem />{item.FirstNumber}</div>
+                    <div style= {topCircleStyle}><RepeatedItem />{item.SecondNumber}</div>
+                    <div style= {topCircleStyle}><RepeatedItem />{item.ThirdNumber}</div>
+                    <div style= {topCircleStyle}><RepeatedItem />{item.FourthNumber}</div>
+                    <div style= {topCircleStyle}><RepeatedItem />{item.FifthNumber}</div>
+                    <div style= {topCircleStyle}><RepeatedItem />{item.PowerBall}</div>
+                </div>
+                
             ))}
         </div>
     )
