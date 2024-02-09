@@ -1,3 +1,4 @@
+import BottomCircles from './BottomCircles';
 import Oval from './Oval'
 import TopCircles from './TopCircles'
 
@@ -12,11 +13,9 @@ function PowerBall() {
             </div>
             <div className="top-circles">
                 < TopCircles />
-                {/* < TopCircles />
-                < TopCircles />
-                < TopCircles />
-                < TopCircles />
-                < TopCircles /> */}
+            </div>
+            <div>
+                < BottomCircles />
             </div>
         </div>
     )

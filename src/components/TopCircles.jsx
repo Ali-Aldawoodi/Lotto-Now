@@ -16,7 +16,8 @@ const RepeatedItem = ({ FirstNumber, SecondNumber, ThirdNumber, FourthNumber, Fi
 const topContainerStyle = {
     display: 'flex',
     justifyContent: 'center',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+     textAlign: 'center'
 }
 
 const topCircleStyle = {
@@ -26,7 +27,9 @@ const topCircleStyle = {
     borderRadius: "50%",
     width: 100,
     height: 100,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    color: 'white',
+   
 };
 
 function TopCircles() {
